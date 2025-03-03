@@ -6,7 +6,7 @@ def ends_with_number_in_parentheses(s):
     return bool(re.search(r" \(\d+\)$", s))  # 匹配 " (数字)" 结尾
 
 # 设定主目录路径
-base_dir = "Data_2025_2_25/Data(2025_2_25)"
+base_dir = "./data/Data_2025_2_25/Data(2025_2_25)"
 
 # 获取所有不带 (1) 和 (2) 标号的主文件夹
 main_folders = set()
