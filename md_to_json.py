@@ -51,12 +51,12 @@ for main_folder in main_folders:
     # 存入 JSON 数据
     data_list.append({
         "instruction": "[TMP comments]",
-        "input": initial_tmp+current_tmp,
+        "input": initial_tmp + "\n\n" + current_tmp,
         "output": comments
     })
 
 # 保存 JSON 文件
-output_file = "output.json"
+output_file = "./data/Data_2025_2_25.json"
 with open(output_file, "w", encoding="utf-8") as f:
     json.dump(data_list, f, indent=4, ensure_ascii=False)
 
