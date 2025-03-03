@@ -78,6 +78,14 @@ CUDA_VISIBLE_DEVICES=0 llamafactory-cli train \
     --fp16
 ```
 
+```bash
+CUDA_VISIBLE_DEVICES=0 llamafactory-cli webchat \
+    --model_name_or_path /home/sky-lab/codes/DeepSeek-R1-Distill-Llama-8B \
+    --adapter_name_or_path /home/sky-lab/SHENG_code/LLM_TMP/saves/DeepSeek-R1-Distill-Llama-8B  \
+    --template deepseek3 \
+    --finetuning_type lora
+```
+
 ## Qwen2.5-VL-7B-Instruct
 
 
