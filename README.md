@@ -1,5 +1,9 @@
 # LLM-TMP
 
+## fine tune log
+### 2025/03/07
+
+
 ## Llama-3.1-8B-Instruct
 ### Fine-tune
 ```bash
@@ -7,14 +11,14 @@ CUDA_VISIBLE_DEVICES=0 llamafactory-cli train \
     --stage sft \
     --do_train \
     --model_name_or_path /home/sky-lab/codes/Llama-3.1-8B-Instruct \
-    --dataset identity,TMP_Data_2025_2_25 \
+    --dataset identity,TMP_Data_2025_2_25_v1-1 \
     --dataset_dir /home/sky-lab/SHENG_code/LLM-TMP/data \
     --template llama3 \
     --finetuning_type lora \
-    --output_dir /home/sky-lab/SHENG_code/LLM-TMP/saves/LLaMA3.1-8B/lora/sft \
+    --output_dir /home/sky-lab/SHENG_code/LLM-TMP/saves/LLaMA3.1-8B_v1-1/lora/sft_2025-03-07-11-54-31 \
     --overwrite_cache \
     --overwrite_output_dir \
-    --cutoff_len 1024 \
+    --cutoff_len 2048 \
     --preprocessing_num_workers 16 \
     --per_device_train_batch_size 2 \
     --per_device_eval_batch_size 1 \
@@ -34,7 +38,7 @@ CUDA_VISIBLE_DEVICES=0 llamafactory-cli train \
     --fp16
 ```
 ```bash
-deepspeed --num_gpus 2 src/train.py \
+FORCE_TORCHRUN=1 llamafactory-cli train \
     --deepspeed /home/sky-lab/codes/LLaMA-Factory/examples/deepspeed/ds_z3_offload_config.json \
     --stage sft \
     --do_train \
