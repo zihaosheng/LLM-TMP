@@ -5,6 +5,12 @@
   "TMP_Data_2025_2_25_v1-1": {
     "file_name": "Data_2025_2_25_v1-1.json"
   },
+  "alan_train_data": {
+    "file_name": "alan_train_data.json"
+  },
+  "alan_eval_data": {
+    "file_name": "alan_eval_data.json"
+  },
   "identity": {
     "file_name": "identity.json"
   },
