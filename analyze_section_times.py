@@ -197,7 +197,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument(
         "--base-dir",
-        default="/home/sky-lab/codes/LLaMA-Factory/tmp/inference_efficiency/DeepSeek-R1-Distill-Qwen-14B/",
+        default="paper/inference_efficiency/DeepSeek-R1-Distill-Qwen-14B/",
         help="jsonl 路径",
     )
     ap.add_argument(
