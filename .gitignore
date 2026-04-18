@@ -1,0 +1,10 @@
+.idea/*
+.vscode/*
+data/*
+megered/*
+saves/*
+# paper/*
+cache/*
+*_label.md
+*_predict.md
+*_prompt.md
